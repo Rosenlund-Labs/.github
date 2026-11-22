@@ -1,0 +1,22 @@
+name: Chore (a person does it)
+description: A setting, an account or other work outside the repo that an agent cannot do.
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: What needs doing and why.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: Where to click or what to run.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: How to check it worked.

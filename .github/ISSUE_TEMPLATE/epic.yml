@@ -1,0 +1,22 @@
+name: Epic
+description: A goal made of several tickets. Nobody works on the epic directly.
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What this achieves and why, in a few sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: How you will know the whole epic is finished.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Specs, decisions and related issues. Add the tickets as sub-issues.

@@ -1,0 +1,27 @@
+name: Decision or spec
+description: A question that needs a person, or work that needs a spec or plan first.
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What needs deciding, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: Each option with its trade-offs.
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: Which option you would pick and why.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links to specs, epics and related issues.

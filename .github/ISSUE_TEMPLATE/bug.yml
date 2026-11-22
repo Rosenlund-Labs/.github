@@ -1,0 +1,29 @@
+name: Bug
+description: Something does not work as it should.
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: One plain sentence on what is wrong. Keep URLs out of it.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The steps, with exact commands or inputs.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual
+      description: What should happen and what happens instead.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: The command or check that shows it is fixed.

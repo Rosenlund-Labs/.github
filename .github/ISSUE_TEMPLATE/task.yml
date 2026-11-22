@@ -1,0 +1,65 @@
+name: Task (Binnacle can do it)
+description: A change an agent can make and check, with everything it needs in the ticket or the repo.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when everything the work needs is in this ticket or the repo, nothing is outside the repo, and a command can check the result. Otherwise pick another form. Add the `binnacle:ready` label yourself when the checklist at the bottom is true.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: One plain sentence on what and why. Binnacle copies this first line into alerts, cut to 120 characters, so keep URLs out of it.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: The files or areas it may change, and what is out of scope.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance
+      description: A short checklist of things you can check.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: The exact commands to run, for example `pnpm test` and `pnpm lint`.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: The spec section, the epic, and related issues.
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options:
+        - Normal
+        - Touches a guarded path (a person merges it)
+        - Needs a spec first
+    validations:
+      required: true
+  - type: textarea
+    id: extras
+    attributes:
+      label: Allowed extras
+      description: Web domains it may read, or a tool it needs. Leave blank if none.
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Before adding the binnacle:ready label
+      options:
+        - label: Everything it needs is in this ticket or the repo
+        - label: No decision is waiting on me
+        - label: Nothing is outside the repo (settings, accounts, credentials)
+        - label: A command can check the result
+        - label: It fits one pull request (about 400 lines or 15 files)
