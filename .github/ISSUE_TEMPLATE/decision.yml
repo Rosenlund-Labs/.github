@@ -1,5 +1,6 @@
 name: Decision or spec
 description: A question that needs a person, or work that needs a spec or plan first.
+labels: ["needs:me"]
 body:
   - type: textarea
     id: question

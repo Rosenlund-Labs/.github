@@ -1,5 +1,6 @@
 name: Chore (a person does it)
 description: A setting, an account or other work outside the repo that an agent cannot do.
+labels: ["needs:me"]
 body:
   - type: textarea
     id: what
